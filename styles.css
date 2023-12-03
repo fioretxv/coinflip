@@ -1,0 +1,14 @@
+*{
+    box-sizing: content-box;
+}
+.header{
+    background-color: orangered;
+}
+.body{
+    background-image: url(lavaleaper-background.jpg);
+    background-repeat: no-repeat;
+}
+.button{
+    border-radius: 12px;
+    border-color: rgb(0, 0, 0);
+}
