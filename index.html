@@ -4,25 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lava Leaper</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-          <h1>Lava Leaper</h1>
-    </header>
+  <header>
+   <h1>Lava Leaper</h1>
+  </header>
+  <div class="content">
     <div class="intro">
         <h1>On no!</h1>
         <p>You've fallen into a volcano! 
-            The only way out is to climb, but be careful! Only half the rocks are sturdy!
+          <br>
+            The only way out is to climb, but be careful, only half the rocks are sturdy!
         </p>
-        <h1>Pick a rock to start climbing to the top!</h1>
+        <h1>Pick a Rock to Start Climbing to the Top!</h1>
     </div>
     <main class="choice">
         <section class="pchoice">
-          <h2>You choose . . .</h2>
+          <h2>You Choose . . .</h2>
           <div class="images">
-            <button><img id="r-img" src="" alt="rock 1"></button>
-            <button><img id="p-img" src="" alt="rock 2"></button>
+            <button><img id="r-img" src="" alt="Rock 1"></button>
+            <button><img id="p-img" src="" alt="Rock 2"></button>
           </div>
         </section>
         <section class="ochoice">
@@ -31,11 +33,12 @@
         </section>
       </main>
       <section class="scoreboard">
-        <h2 id="result">You Made It to the Next Rock!</h2>
-        <div id="play" class="distaSnce">
-          <p class="label">Distance:</p>
+        <h2 id="result">You've Made it...</h2>
+        <div id="play" class="distance">
           <p id="pscore">0</p>
           <p id="Units">Rocks</p>
         </div>
       </section>
+ </div>
+ <script src="script.js"></script>
 </body>

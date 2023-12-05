@@ -1,14 +1,28 @@
 *{
     box-sizing: content-box;
+    color: blanchedalmond;
 }
-.header{
-    background-color: orangered;
+header{
+    background:linear-gradient(orangered,orange);
+    padding: .25rem;
+    height: 5rem;
 }
-.body{
-    background-image: url(lavaleaper-background.jpg);
+body{
+    background-image: url(lavaleaper-background.jpg) ;
     background-repeat: no-repeat;
 }
-.button{
-    border-radius: 12px;
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    page
+    padding-left: 10vw;
+    padding-right: 10vw;
+    text-align:center;
+}
+button{
+    border-radius: 2px;
     border-color: rgb(0, 0, 0);
+    color: red;
 }
