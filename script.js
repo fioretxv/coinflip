@@ -1,6 +1,6 @@
 let timesplayed = 0;
-let  timeswon = 0;
-let timeslost = 0;
+rocksclimbedwon = 0;
+rocksclimbedlost = 0;
 function run(x) {
     let choiceresult = x;
     let randNum = Math.floor(Math.random() * 2) + 1;
@@ -12,27 +12,29 @@ function run(x) {
     }
     let gameresult;
     if (chanceresult === choiceresult){
-        gameResult = "win";
-        rocksclimbed++;
+        gameresult = " You climbed higher!";
+        rocksclimbedwon++;
     } else {
-        gameResult = "loss"
-        rocksclimbed--;
+        gameresult = "That Rock is Too Hot!"
     }
-    gamesplayed++;
-    let prediction = document.getElementById('prediction');
-    prediction.innerText = chanceresult;
+    timesplayed++;
+    let chance = document.getElementById('chance');
+    chance.innerText = chanceresult;
     let result = document.getElementById('result');
-    result.innerText = flipresult;
+    result.innerText = gameresult;
     let gameCount = document.getElementById('count');
-    gameCount.innerText = gamesPlayed;
-    let rocksclimbed = document.getElementById('result');
+    gameCount.innerText = timesplayed;
+    let won = document.getElementById('wins');
+    won.innerText = rocksclimbedwon;
 }
 function resetScore() {
-    gamesPlayed = 0;
-    rocksclimbed = 0;
+    let timesplayed = 0;
+    rocksclimbedwon = 0;
+    rocksclimbedlost = 0;
     let gameCount = document.getElementById('count');
+    let won = document.getElementById('wins')
+    let lost = document.getElementById('losses')
     let rocksclimbed = document.getElementById('result');
-    gameCount.innerText = gamesPlayed;
-    winCount.innerText = gamesWon;
-    lossCount.innerText = gamesLost;
+    gameCount.innerText = timesplayed;
+    won.innerText = rocksclimbedwon;
   }

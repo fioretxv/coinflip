@@ -7,38 +7,40 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <hr>
   <header>
    <h1>Lava Leaper</h1>
   </header>
+  <hr>
   <div class="content">
     <div class="intro">
         <h1>On no!</h1>
         <p>You've fallen into a volcano! 
           <br>
-            The only way out is to climb, but be careful, only half the rocks are sturdy!
+            The only way out is to climb, but be careful, only half the rocks are cool enough to touch!
         </p>
         <h1>Pick a Rock to Start Climbing to the Top!</h1>
     </div>
-    <main class="choice">
-        <section class="pchoice">
+    <br>
+    <main class="Choose">
+        <section id="choice">
           <h2>You Choose . . .</h2>
           <div class="images">
-            <button><img id="r-img" src="" alt="Rock 1"></button>
-            <button><img id="p-img" src="" alt="Rock 2"></button>
+            <button><img  id="Rock1" onclick="run('Rock1')" src="rock1.jpg" width=384 height=216 alt="Rock 1"></button><figcaption>Rock 1</figcaption>
+            <button><img  id="Rock2" onclick="run('Rock2')" src="rock2.jpg" width=384 height=216 alt="Rock 2"></button><figcaption>Rock 2</figcaption>
           </div>
         </section>
-        <section class="ochoice">
+        <section id="output">
           <h2>The Correct Rock Is...</h2>
-          <img id="o-img" src="" alt="" >
+          <h2 class="answer1"><span id="chance"></span></h2>
         </section>
       </main>
       <section class="scoreboard">
-        <h2 id="result">You've Made it...</h2>
-        <div id="play" class="distance">
-          <p id="pscore">0</p>
-          <p id="Units">Rocks</p>
+        <p><span id="result"></span></p>
+        <h2 class="answer2">You've Played <span id="count">0</span> Games and Made it <span id="wins">0</span> Meters Higher!</p>
         </div>
       </section>
  </div>
  <script src="script.js"></script>
 </body>
+</html>

@@ -3,9 +3,11 @@
     color: blanchedalmond;
 }
 header{
-    background:linear-gradient(orangered,orange);
+    background-image:url(wp1968192.jpg);
+    text-shadow: -2px 2px 0 orangered;
     padding: .25rem;
     height: 5rem;
+    font-size: x-large;
 }
 body{
     background-image: url(lavaleaper-background.jpg) ;
@@ -16,13 +18,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-content: flex-start;
-    page
     padding-left: 10vw;
     padding-right: 10vw;
     text-align:center;
 }
 button{
-    border-radius: 2px;
-    border-color: rgb(0, 0, 0);
-    color: red;
+    border: none;
 }
