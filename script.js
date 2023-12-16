@@ -1,40 +1,42 @@
-let timesplayed = 0;
-rocksclimbedwon = 0;
-rocksclimbedlost = 0;
+let timesplayed =0;
+let rocksclimb =0;
 function run(x) {
+    let rocksclimb = sessionStorage.getItem("won");
+    let timesplayed = sessionStorage.getItem("gameCount");
     let choiceresult = x;
     let randNum = Math.floor(Math.random() * 2) + 1;
     let chanceresult;
-    if (randNum === 1) {
-        chanceresult = 'Rock 1'
-    } else {
-        chanceresult = 'Rock 2'
-    }
     let gameresult;
-    if (chanceresult === choiceresult){
-        gameresult = " You climbed higher!";
-        rocksclimbedwon++;
+    if (randNum === 1) {
+        chanceresult = 'Rock 1';
     } else {
-        gameresult = "That Rock is Too Hot!"
-    }
+        chanceresult = 'Rock 2';
+    };
+    if (chanceresult === choiceresult){
+        gameresult = "You climbed higher!";
+        rocksclimb++;
+    } else {
+        gameresult = "That Rock is Too Hot!";
+    };
     timesplayed++;
+
     let chance = document.getElementById('chance');
     chance.innerText = chanceresult;
+
     let result = document.getElementById('result');
     result.innerText = gameresult;
+
     let gameCount = document.getElementById('count');
     gameCount.innerText = timesplayed;
+    sessionStorage.setItem("gameCount",timesplayed)
+    
     let won = document.getElementById('wins');
-    won.innerText = rocksclimbedwon;
+    won.innerText = rocksclimb;
+    sessionStorage.setItem("won",rocksclimb)
 }
-function resetScore() {
-    let timesplayed = 0;
-    rocksclimbedwon = 0;
-    rocksclimbedlost = 0;
-    let gameCount = document.getElementById('count');
-    let won = document.getElementById('wins')
-    let lost = document.getElementById('losses')
-    let rocksclimbed = document.getElementById('result');
-    gameCount.innerText = timesplayed;
-    won.innerText = rocksclimbedwon;
-  }
+function reset(){
+    sessionStorage.setItem("won",0);
+    sessionStorage.setItem("gameCount",0);
+    document.getElementById('wins').innerHTML = sessionStorage.getItem("won");
+    document.getElementById('count').innerHTML = sessionStorage.getItem("gameCount");
+}
